@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  
+  <title>Sign Up | UniVents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text">UniVents</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Browse Events</a>
+        <a href="#">My Registrations</a>
+        <a href="#">Organizer Dashboard</a>
+      </nav>
+      <div class="auth">
+        <a href="login.html" class="login">Login</a>
+        <a href="signup.html" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="card" id="authCard">
+    <h1>Create your account</h1>
+    <p class="subtitle">Join UniEvents to discover campus events, connect with your university community, and create memorable experiences</p>
+
+    <form action="register.php" method="post">
+
+      <p class="group-title">Register as</p>
+      <input type="radio" id="student" name="role" value="Student" required>
+      <label class="role-label" for="student">Student</label>
+      <input type="radio" id="organizer" name="role" value="Organizer" required>
+      <label class="role-label" for="organizer">Organizer</label>
+
+     
+
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="fullname">Full name</label>
+        <input class="field" type="text" id="fullname" name="fullname" required>
+
+        <label for="studentid">Student ID</label>
+        <input class="field" type="text" id="studentid" name="studentid" placeholder="e.g. 23-12345-1" required>
+
+        <label for="dept">Department</label>
+        <select class="field" id="dept" name="dept" required>
+        <option value="">-- Select Department --</option>
+        <option value="CSE">Computer Science and Engineering (CSE)</option>
+        <option value="DS">Data Science (DS)</option>
+        <option value="EEE">Electrical and Electronic Engineering (EEE)</option>
+        <option value="CoE">Computer Engineering (CoE)</option>
+        <option value="Architecture">Architecture (BArch)</option>
+        <option value="BBA">Business Administration (BBA)</option>
+        <option value="Economics">Economics (BSS)</option>
+        <option value="English">English (BA)</option>
+        <option value="Media">Media and Mass Communication (BA)</option>
+        <option value="Law">Law (LLB)</option>
+        <option value="Pharmacy">Pharmacy (B.Pharm)</option>
+        </select>
+
+        <label for="semester">Current semester</label>
+        <select class="field" id="semester" name="semester" required>
+        <option value="">-- Select Semester --</option>
+        <option value="1">1st</option>
+        <option value="2">2nd</option>
+        <option value="3">3rd</option>
+        <option value="4">4th</option>
+        <option value="5">5th</option>
+        <option value="6">6th</option>
+        <option value="7">7th</option>
+        <option value="8">8th</option>
+        <option value="9">9th</option>
+        <option value="10">10th</option>
+        <option value="11">11th</option>
+        <option value="12">12th</option>
+        </select>
+
+        <label for="dob">Date of birth</label>
+        <input class="field" type="date" id="dob" name="dob" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account</legend>
+        <label for="email">University email</label>
+        <input class="field" type="email" id="email" name="email" placeholder="you@uni.edu" required>
+
+        <label for="password">Password</label>
+        <input class="field" type="password" id="password" name="password" required>
+
+        <label for="Conpassword">Confirm password</label>
+        <input class="field" type="password" id="Conpassword" name="Conpassword" required>
+      </fieldset>
+
+      <p class="terms-row">
+        <input type="checkbox" id="Condition" name="Condition" value="Agree" required>
+        <label class="terms" for="Condition">I Agree Terms and Condition *</label>
+      </p>
+
+      <input class="submit-btn" type="submit" value="Sign Up">
+    </form>
+
+    <p class="switch">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>📅 UniVents</h3>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="#">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="#">Organizer Dashboard</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
