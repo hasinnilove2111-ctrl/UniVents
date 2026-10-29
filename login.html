@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <title>Login | UniVents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text">UniVents</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Browse Events</a>
+        <a href="#">My Registrations</a>
+        <a href="#">Organizer Dashboard</a>
+      </nav>
+
+      <div class="auth">
+        <a href="login.html" class="login">Login</a>
+      <a href="signup.html" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="card" id="authCard">
+    <h1>Welcome back</h1>
+    <p class="subtitle">Welcome back! Stay connected with campus events and never miss a moment</p>
+
+    <form action="login.php" method="post">
+
+      <p class="group-title">Login as</p>
+      <input type="radio" id="student" name="role" value="Student" required>
+      <label class="role-label" for="student">Student</label>
+      <input type="radio" id="organizer" name="role" value="Organizer" required>
+      <label class="role-label" for="organizer">Organizer</label>
+      <p class="admin-note">Are you an admin? <a href="adminlogin.html">Login as Admin</a></p>
+
+      <label for="email">University email</label>
+      <input class="field" type="email" id="email" name="email" placeholder="you@uni.edu" required>
+
+      <label for="password">Password</label>
+      <input class="field" type="password" id="password" name="password" required>
+
+      <input class="submit-btn" type="submit" value="Login">
+    </form>
+
+    <p class="switch">New to UniVents? <a href="signup.html">Sign up</a></p>
+  </div>
+
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>📅 UniVents</h3>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="#">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="#">Organizer Dashboard</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
