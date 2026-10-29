@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+ 
+  <title>Admin | UniVents</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text">UniVents</span>
+      </div>
+      <nav class="nav">
+        <a href="#" class="active">Home</a>
+        <a href="#">Browse Events</a>
+        <a href="#">My Registrations</a>
+        <a href="#">Organizer Dashboard</a>
+      </nav>
+      <div class="auth">
+        <a href="login.html" class="login">Login</a>
+        <a href="signup.html" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="card" id="authCard">
+    <h1>Admin account</h1>
+    <p class="subtitle">Only for university staff. An access code is required.</p>
+
+    <form action="admin-register.php" method="post">
+
+      <fieldset>
+        <legend>Admin Information</legend>
+        <label for="fullname">Full name</label>
+        <input class="field" type="text" id="fullname" name="fullname" required>
+
+        <label for="employeeid">Employee ID</label>
+        <input class="field" type="text" id="employeeid" name="employeeid" placeholder="e.g. EMP-1024" required>
+
+        <label for="designation">Designation</label>
+        <select class="field" id="designation" name="designation" required>
+          <option value="">-- Select Designation --</option>
+          <option value="System Administrator">System Administrator</option>
+          <option value="Student Affairs Officer">Student Affairs Officer</option>
+          <option value="Event Approver">Event Approver</option>
+          <option value="IT Officer">IT Officer</option>
+        </select>
+
+        <label for="office">Office</label>
+        <select class="field" id="office" name="office" required>
+          <option value="">-- Select Office --</option>
+          <option value="Registrar">Registrar's Office</option>
+          <option value="Student Affairs">Student Affairs</option>
+          <option value="IT">IT Office</option>
+          <option value="Dean">Dean's Office</option>
+        </select>
+
+        <label for="phone">Phone number</label>
+        <input class="field" type="text" id="phone" name="phone" placeholder="01XXXXXXXXX" required>
+
+        <label for="joindate">Date of joining</label>
+        <input class="field" type="date" id="joindate" name="joindate" required>
+
+        <label for="admincode">Admin access code</label>
+        <input class="field" type="password" id="admincode" name="admincode" placeholder="Given by the university" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Account</legend>
+        <label for="email">University email</label>
+        <input class="field" type="email" id="email" name="email" placeholder="you@uni.edu" required>
+
+        <label for="password">Password</label>
+        <input class="field" type="password" id="password" name="password" required>
+
+        
+      </fieldset>
+
+      <p class="terms-row">
+        <input type="checkbox" id="Condition" name="Condition" value="Agree" required>
+        <label class="terms" for="Condition">I Agree Terms and Condition *</label>
+      </p>
+
+      <input class="submit-btn" type="submit" value="Login As Admin">
+    </form>
+
+
+    <p class="switch">Not an admin? <a href="signup.html">Student / Organizer sign up</a></p>
+  </div>
+
+<!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>📅 UniVents</h3>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="#">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="#">Organizer Dashboard</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
