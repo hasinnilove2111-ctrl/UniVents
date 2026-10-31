@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Events</title>
+  <link rel="stylesheet" href=" ">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon"></span>
+        <span class="logo-text">UniVents</span>
+      </div>
+
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Browse Events</a>
+        <a href="#">My Registrations</a>
+        <a href="overview.html" class="active">Organizer Dashboard</a>
+      </nav>
+
+      <div class="auth">
+        <a href="#" class="login">Login</a>
+        <a href="#" class="btn">Sign Up</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main area: sidebar and content -->
+  <div class="main-area">
+
+    <aside class="sidebar">
+      <p class="sidebar-title">ORGANIZER</p>
+      <a href="overview.html"> Overview</a>
+      <a href="my-events.html" class="active"> My Events</a>
+      <a href="create-event.html">Create Event</a>
+      <a href="attendees.html"> Registered Attendees</a>
+    </aside>
+
+    <main class="content">
+      <div class="box">
+        <h2>My events</h2>
+<!-- my events:all the upcoming events -->
+        <table>
+          <tr>
+            <th>Event</th>
+            <th>Date</th>
+            <th>Category</th>
+            <th>Seats left</th>
+            <th>Action</th>
+          </tr>
+
+           <tr>
+            <td><b>Web Development Workshop</b></td>
+            <td class="light-text">15 Nov 2026</td>
+            <td class="light-text">Workshop</td>
+            <td class="light-text">148 / 150</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>AI & the Future of Technology</b></td>
+            <td class="light-text">20 Nov 2026</td>
+            <td class="light-text">Seminar</td>
+            <td class="light-text">299 / 300</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Programming Contest 2026</b></td>
+            <td class="light-text">28 Nov 2026</td>
+            <td class="light-text">Technology</td>
+            <td class="light-text">89 / 90</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Freshers Cultural Night</b></td>
+            <td class="light-text">5 Dec 2026</td>
+            <td class="light-text">Cultural</td>
+            <td class="light-text">499 / 500</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Inter-Department Football Cup</b></td>
+            <td class="light-text">22 Nov 2026</td>
+            <td class="light-text">Sports</td>
+            <td class="light-text">200 / 200</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Career Planning Seminar</b></td>
+            <td class="light-text">10 Dec 2026</td>
+            <td class="light-text">Seminar</td>
+            <td class="light-text">120 / 120</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Robotics &amp; IoT Expo</b></td>
+            <td class="light-text">14 Dec 2026</td>
+            <td class="light-text">Technology</td>
+            <td class="light-text">400 / 400</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Mobile Photography Workshop</b></td>
+            <td class="light-text">18 Nov 2026</td>
+            <td class="light-text">Workshop</td>
+            <td class="light-text">40 / 40</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+          <tr>
+            <td><b>Campus Badminton Open</b></td>
+            <td class="light-text">2 Dec 2026</td>
+            <td class="light-text">Sports</td>
+            <td class="light-text">64 / 64</td>
+            <td><button type="button" class="postpone-btn">Postpone</button></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>UniVents</h3>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="#">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="overview.html">Organizer Dashboard</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+ 
+/* This CSS file is use for style the organizer part,it has styled ,overview.html,creat-event.html,
+my-event.html & attendees.html */
+.main-area {
+  display: flex;
+  gap: 25px;
+  align-items: flex-start;
+  max-width: 1500px;
+  margin: 30px auto 0 auto;
+  padding: 0 20px;
+}
+
+.content { flex: 1; }
+
+.content h1 { margin: 0 0 20px 0; }
+
+/* Sidebar  */
+.sidebar {
+  width: 240px;
+  padding: 20px 12px;
+  border-radius: 20px;
+  background: #2a1a6e;
+}
+/* margin: top right bottom left; */
+.sidebar-title {
+  margin: 0 0 12px 12px;
+  color: #a99be0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.sidebar a {
+  display: block;
+  margin-bottom: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+ }
+
+.sidebar a:hover { background: #4a3a9e; }
+
+/* The page we are on */
+.sidebar a.active { background: #7b5cf0; }
+
+/*  White box (used for all content) .box{}
+CSS Flexbox is used for a one-dimensional layout, with rows OR columns.
+
+CSS Grid is used for a two-dimensional layout, with rows AND columns.
+*/
+.box {
+  padding: 25px;
+  border: 1px solid #e6e2f5;
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 4px 12px lightgray;
+}
+
+ 
+
+/* Overview 4 small boxes  */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+  .box stat-box box {
+  
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+ 
+
+.number {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.label {
+  margin: 0;
+  color: #5f6280;
+  font-size: 20px;
+  text-align: center;
+  font-weight:bold;
+}
+
+/* Overview: two big boxes side by side */
+.two-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* Upcoming events list */
+.event-row {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 14px 0;
+  border-bottom: 1px solid #e6e2f5;
+}
+
+.event-name { margin: 0; font-weight: bold; }
+
+.event-info {
+  margin: 4px 0 0 0;
+  color: #5f6280;
+  font-size: 18px;
+}
+
+/* View button and Postpone button */
+.view-btn,
+.postpone-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #efeaff;
+  color: #2a1a6e;
+  font-size: 15px;
+  font-weight: bold;
+                                                                           
+ }
+
+.view-btn:hover
+{
+  background:#a49dba
+}
+
+.postpone-btn:hover { background:crimson; }
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  padding: 10px 0;
+  color: #5f6280;
+  font-size: 13px;
+  text-align: left;
+  text-transform: uppercase;
+}
+/* border-top draws a thin line above every cell, which makes the row separators. 
+Because of border-collapse, the lines join into one continuous line per row. */
+td {
+  padding: 14px 0;
+  border-top: 1px solid #e6e2f5;
+  
+
+}
+
+/* Light text for dates, ids, categories */
+.light-text { color: #5f6280; 
+white-space:nowrap;}
+
+/* Attendance checkbox */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+/* ---------- Create event form ---------- */
+/* Two fields side by side */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.field { margin-bottom: 20px; }
+/* display: block puts it on its own line above the input.
+by defoult it sits next to the input */
+.field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/*  input, dropdown and textarea same style  */
+.field input,
+.field select,
+.field textarea {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #d9d4f0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 3px solid #efeaff;
+  border-color: #5b34d6;
+}
+
+.field textarea {
+  height: 110px;
+  resize: vertical;
+}
+/* Here this css code is for the header,fotter,navbar customization,this is not fixed yet
+it will be changed further */
+/* ===================================
+   common.css
+   Header and footer styles.
+   Same on all pages.
+   =================================== */
+
+/* Basic settings for the whole page */
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family:  'Times New Roman', Times, serif;
+  color: #1b1b3a;
+  background: #f7f5ff;
+}
+
+a { text-decoration: none; }
+
+/* Keeps the content in the middle of the screen */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ---------- Header ---------- */
+.header {
+  background: white;
+  border-bottom: 1px solid #e6e2f5;
+}
+
+/* Logo on left, menu in middle, login on right */
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* .logo-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #5b34d6;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+}
+ */
+.logo-text {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2a1a6e;
+}
+
+/* Menu links */
+.nav { display: flex; gap: 8px; }
+
+.nav a {
+  padding: 10px 16px;
+  border-radius: 20px;
+  color: #5f6280;
+ }
+
+.nav a:hover { background: #efeaff; }
+
+/* The link of the page we are on */
+.nav a.active {
+  background: #efeaff;
+  color: #2a1a6e;
+}
+
+/* Login and Sign Up */
+.auth {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.login { color: #1b1b3a; }
+
+/* Purple button (Sign Up, Publish event) */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #5b34d6;
+  color: white;
+  font-size: 16px;
+  }
+
+.btn:hover { background: #7550e8; }
+.btn:focus { outline: 3px solid orange; }
+
+/* ---------- Footer ---------- */
+.footer {
+  margin-top: 60px;
+  padding: 40px 0 20px 0;
+  background: #2a1a6e;
+  color: white;
+}
+
+/* Two columns: about text and links */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+}
+
+.footer h3 { margin: 0 0 10px 0; }
+.footer h4 { margin: 0 0 12px 0; }
+
+.footer p {
+  margin: 0 0 8px 0;
+  color: #cfc8f0;
+  line-height: 1.5;
+}
+
+.footer a { color: #cfc8f0; }
+.footer a:hover { color: white; }
+
+/* Last line of the footer */
+.copyright {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid gray;
+  text-align: center;
+  font-size: 14px;
+}
+
+ 
+ 
+ 

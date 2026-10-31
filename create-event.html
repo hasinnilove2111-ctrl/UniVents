@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event</title>
+    <link rel="stylesheet" href=" " />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-row">
+        <div class="logo">
+          <span class="logo-icon"></span>
+          <span class="logo-text">UniVents</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#">Browse Events</a>
+          <a href="#">My Registrations</a>
+          <a href="overview.html" class="active">Organizer Dashboard</a>
+        </nav>
+
+        <div class="auth">
+          <a href="#" class="login">Login</a>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main area: sidebar + content -->
+    <div class="main-area">
+      <aside class="sidebar">
+        <p class="sidebar-title">ORGANIZER</p>
+        <a href="overview.html"> Overview</a>
+        <a href="my-events.html">My Events</a>
+        <a href="create-event.html" class="active"> Create Event</a>
+        <a href="attendees.html">Registered Attendees</a>
+      </aside>
+
+      <main class="content">
+        <div class="box">
+          <h2>Create a new event</h2>
+
+          <form action="#">
+            <!-- One full width field -->
+            <div class="field">
+              <label for="title">Event title</label>
+              <input type="text" id="title" name="title" />
+            </div>
+
+            <!-- Two fields side by side: put them inside form-row -->
+            <div class="form-row">
+              <div class="field">
+                <label for="category">Category</label>
+                <select id="category" name="category">
+                  <option>Workshop</option>
+                  <option>Seminar</option>
+                  <option>Technology</option>
+                  <option>Cultural</option>
+                  <option>Sports</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="seats">Seats</label>
+                <input type="number" id="seats" name="seats" value="50" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+
+              <div class="field">
+                <label for="time">Time</label>
+                <input
+                  type="text"
+                  id="time"
+                  name="time"
+                  placeholder="10:00 AM - 12:00 PM"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="venue">Venue</label>
+                <input type="text" id="venue" name="venue" />
+              </div>
+
+              <div class="field">
+                <label for="organizer">Organizer</label>
+                <input type="text" id="organizer" name="organizer" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="field">
+                <label for="deadline">Registration deadline</label>
+                <input type="date" id="deadline" name="deadline" />
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="description">Description</label>
+              <textarea id="description" name="description"></textarea>
+            </div>
+
+            <button type="submit" class="btn">Publish event</button>
+          </form>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>UniVents</h3>
+          <p>
+            Your Campus, Your Events. A University Event Management System built
+            as a Web Technologies course project.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <p><a href="#">Browse Events</a></p>
+          <p><a href="#">My Registrations</a></p>
+          <p><a href="overview.html">Organizer Dashboard</a></p>
+        </div>
+      </div>
+      <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

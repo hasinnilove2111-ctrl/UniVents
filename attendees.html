@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registered Attendees</title>
+    <link rel="stylesheet" href=" " />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container header-row">
+        <div class="logo">
+          <span class="logo-icon"></span>
+          <span class="logo-text">UniVents</span>
+        </div>
+
+        <nav class="nav">
+          <a href="#">Home</a>
+          <a href="#">Browse Events</a>
+          <a href="#">My Registrations</a>
+          <a href="overview.html" class="active">Organizer Dashboard</a>
+        </nav>
+
+        <div class="auth">
+          <a href="#" class="login">Login</a>
+          <a href="#" class="btn">Sign Up</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main area: sidebar + content -->
+    <div class="main-area">
+      <aside class="sidebar">
+        <p class="sidebar-title">ORGANIZER</p>
+        <a href="overview.html"> Overview</a>
+        <a href="my-events.html"> My Events</a>
+        <a href="create-event.html"> Create Event</a>
+        <a href="attendees.html" class="active"> Registered Attendees</a>
+      </aside>
+
+      <main class="content">
+        <div class="box">
+          <h2>Registered attendees</h2>
+
+          <table>
+            <tr>
+              <th>Student</th>
+              <th>ID</th>
+              <th>Event</th>
+              <th>Date</th>
+              <th>Attended</th>
+            </tr>
+
+            <!-- "checked" means the box is ticked. Remove the word to untick it -->
+            <tr>
+              <td>Minhaj</td>
+              <td class="light-text">2022-1-60-001</td>
+              <td>Web Development Workshop</td>
+              <td class="light-text">10 Nov 2026</td>
+              <td><input type="checkbox" checked /></td>
+            </tr>
+            <tr>
+              <td>Shakib</td>
+              <td class="light-text">2022-1-60-014</td>
+              <td>Web Development Workshop</td>
+              <td class="light-text">10 Nov 2026</td>
+              <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Tanvir</td>
+              <td class="light-text">2021-2-50-033</td>
+              <td>AI &amp; the Future of Technology</td>
+              <td class="light-text">9 Nov 2026</td>
+              <td><input type="checkbox" checked /></td>
+            </tr>
+            <tr>
+              <td>Nilove</td>
+              <td class="light-text">2023-1-60-102</td>
+              <td>Programming Contest 2026</td>
+              <td class="light-text">9 Nov 2026</td>
+              <td><input type="checkbox" /></td>
+            </tr>
+            <tr>
+              <td>Mahmudul</td>
+              <td class="light-text">2024-1-10-007</td>
+              <td>Freshers Cultural Night</td>
+              <td class="light-text">8 Nov 2026</td>
+              <td><input type="checkbox" /></td>
+            </tr>
+          </table>
+        </div>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>UniVents</h3>
+          <p>
+            Your Campus, Your Events. A University Event Management System built
+            as a Web Technologies course project.
+          </p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <p><a href="#">Browse Events</a></p>
+          <p><a href="#">My Registrations</a></p>
+          <p><a href="overview.html">Organizer Dashboard</a></p>
+        </div>
+      </div>
+      <p class="copyright">© 2026 UniVents. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
