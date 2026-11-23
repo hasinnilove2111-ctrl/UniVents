@@ -115,21 +115,86 @@ function checkPassword() {
   checkField("password", "Password is required.", isStrongPassword(getValue("password")), "Min 8 characters with uppercase, lowercase and a number.");
 }
 
-function validateSignup() {
-  clearErrors();
-  checkRole();
-  checkName();
-  checkField("studentid", "ID is required.", isValidStudentId(getValue("studentid")), "ID format must be like 23-12345-1.");
-  if (getValue("dept") === "") showError("dept", "Please select a department.");
-  if (getValue("semester") === "") showError("semester", "Please select a semester.");
-  checkField("dob", "Date of birth is required.", getAge(getValue("dob")) >= 16, "You must be at least 16 years old.");
-  checkEmail();
-  checkPassword();
-  checkField("Conpassword", "Please confirm your password.", getValue("password") === getValue("Conpassword"), "Passwords do not match.");
-  checkTerms();
-  console.log("Signup errors:", errors);
-  return errors.length === 0;
+let wrongCount = 0;
+const MAX_WRONG = 3;
+
+function startLock() {
+  const btn = document.getElementById("submit");
+  btn.disabled = true;
+
+  let msg = document.getElementById("lockMsg");
+  if (msg === null) {
+    msg = document.createElement("span");
+    msg.id = "lockMsg";
+    msg.style.display = "block";
+    msg.style.color = "red";
+    msg.style.fontSize = "14px";
+    msg.style.marginTop = "10px";
+    msg.style.textAlign = "center";
+    btn.parentNode.insertBefore(msg, btn.nextSibling);
+  }
+
+  let seconds = 30;
+  msg.innerHTML = "Too many wrong attempts. Try again in " + seconds + " seconds.";
+
+  const timer = setInterval(function () {
+    seconds--;
+    if (seconds > 0) {
+      msg.innerHTML = "Too many wrong attempts. Try again in " + seconds + " seconds.";
+    } else {
+      clearInterval(timer);
+      msg.innerHTML = "";
+      btn.disabled = false;
+      wrongCount = 0;
+    }
+  }, 1000);
 }
+
+
+function validateSignup() {
+    clearErrors();
+
+    checkRole();
+    checkName();
+
+    checkField("studentid", "ID is required.", isValidStudentId(getValue("studentid")), "ID format must be like 23-12345-1.");
+
+    if (getValue("dept") === "") {
+        showError("dept", "Please select a department.");
+    }
+
+    if (getValue("semester") === "") {
+        showError("semester", "Please select a semester.");
+    }
+
+    checkField("dob", "Date of birth is required.", getAge(getValue("dob")) >= 18, "You must be at least 18 years old.");
+
+    checkEmail();
+    checkPassword();
+
+    checkField("Conpassword", "Please confirm your password.", getValue("password") === getValue("Conpassword"), "Passwords do not match.");
+
+    checkTerms();
+
+    console.log("Signup errors:", errors);
+
+    if (errors.length > 0) {
+        wrongCount++;
+
+        if (wrongCount >= MAX_WRONG) {
+            startLock();
+        }
+
+        return false;
+    }
+
+    alert("Registration Successful!");
+
+    document.querySelector("form").reset();
+
+    return false;
+}
+
 
 function validateLogin() {
   clearErrors();
@@ -138,6 +203,20 @@ function validateLogin() {
   if (getValue("password") === "") showError("password", "Password is required.");
   console.log("Login errors:", errors);
   return errors.length === 0;
+}
+
+function validateForgot() {
+  clearErrors();
+  checkEmail();
+  checkPassword();
+  checkField("Conpassword", "Please confirm your password.", getValue("password") === getValue("Conpassword"), "Passwords do not match.");
+  console.log("Forgot password errors:", errors);
+  if (errors.length === 0) {
+    alert("Your password has been changed successfully.");
+    window.location.href = "login.html";
+    return false;
+  }
+  return false;
 }
 
 function validateAdmin() {
