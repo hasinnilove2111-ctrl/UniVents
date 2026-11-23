@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Events - UniVents Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text"><b>UniVents</b></span>
+      </div>
+
+      <nav class="nav">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#events">Browse Events</a>
+        <a href="Home.html#events">Register</a>
+        <a href="admin-overview.html" class="active">Admin Dashboard</a>
+      </nav>
+
+      <div class="auth">
+        <span class="user-badge" id="adminBadge">Admin User · Admin</span>
+        <a href="Home.html">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar + Main -->
+  <div class="container admin-layout">
+
+    <aside class="sidebar">
+      <h4>ADMIN</h4>
+      <nav>
+        <a href="admin-overview.html"><span class="s-icon"></span>Overview</a>
+        <a href="admin-events.html" class="active"><span class="s-icon"></span>Manage Events</a>
+        <a href="admin-users.html"><span class="s-icon"></span>Manage Users</a>
+        <a href="admin-registrations.html"><span class="s-icon"></span>All Registrations</a>
+        <a href="admin-attendance.html"><span class="s-icon"></span>Attendance</a>
+        <a href="admin-reports.html"><span class="s-icon"></span>Reports &amp; Activity</a>
+        <a href="admin-settings.html"><span class="s-icon"></span>Settings</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <h1>Manage Events</h1>
+      <p class="sub">All events across the platform.</p>
+
+      <!-- Edit form (Edit button-e click korle dekhay) -->
+      <div class="card edit-box" id="editBox">
+        <h3>Edit Event</h3>
+        <input type="hidden" id="editId">
+        <div class="edit-row">
+          <div>
+            <label for="editTitle">Event title</label>
+            <input type="text" id="editTitle" class="field form-field">
+          </div>
+          <div>
+            <label for="editCapacity">Capacity</label>
+            <input type="number" id="editCapacity" class="field form-field">
+          </div>
+          <div>
+            <label for="editStatus">Status</label>
+            <select id="editStatus" class="field form-field">
+              <option value="Open">Open</option>
+              <option value="Closed">Closed</option>
+            </select>
+          </div>
+        </div>
+        <p class="error" id="editError"></p>
+        <div class="edit-buttons">
+          <button type="button" class="btn" onclick="saveEvent()">Save Changes</button>
+          <button type="button" class="btn-outline" onclick="cancelEdit()">Cancel</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="filters">
+          <input type="text" id="eventSearch" class="field grow" placeholder="Search by title or organizer..." onkeyup="showEvents()">
+          <select id="eventCategory" class="field" onchange="showEvents()">
+            <option value="">All Categories</option>
+            <option value="Workshop">Workshop</option>
+            <option value="Seminar">Seminar</option>
+            <option value="Competition">Competition</option>
+            <option value="Cultural">Cultural</option>
+          </select>
+          <select id="eventStatus" class="field" onchange="showEvents()">
+            <option value="">All Statuses</option>
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+          </select>
+          <input type="date" id="eventDate" class="field" onchange="showEvents()">
+          <select id="eventSort" class="field" onchange="showEvents()">
+            <option value="dateAsc">Date: earliest first</option>
+            <option value="dateDesc">Date: latest first</option>
+            <option value="title">Title: A-Z</option>
+          </select>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>EVENT TITLE</th>
+              <th>ORGANIZER</th>
+              <th>CATEGORY</th>
+              <th>DATE</th>
+              <th>VENUE</th>
+              <th>REGISTRATIONS</th>
+              <th>CAPACITY</th>
+              <th>STATUS</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody id="eventBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-icon">📅</span>
+          <span class="logo-text"><b>UniVents</b></span>
+        </div>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="index.html#events">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="admin-overview.html">Dashboard</a></p>
+      </div>
+  
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved. · AIUB</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+  <script>
+    showEvents();
+  </script>
+</body>
+</html>

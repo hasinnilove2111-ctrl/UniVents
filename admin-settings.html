@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - UniVents Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text"><b>UniVents</b></span>
+      </div>
+
+      <nav class="nav">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#events">Browse Events</a>
+        <a href="Home.html#events">Register</a>
+        <a href="admin-overview.html" class="active">Admin Dashboard</a>
+      </nav>
+
+      <div class="auth">
+        <span class="user-badge" id="adminBadge">Admin User · Admin</span>
+        <a href="Home.html">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar + Main -->
+  <div class="container admin-layout">
+
+    <aside class="sidebar">
+      <h4>ADMIN</h4>
+      <nav>
+        <a href="admin-overview.html"><span class="s-icon"></span>Overview</a>
+        <a href="admin-events.html"><span class="s-icon"></span>Manage Events</a>
+        <a href="admin-users.html"><span class="s-icon"></span>Manage Users</a>
+        <a href="admin-registrations.html"><span class="s-icon"></span>All Registrations</a>
+        <a href="admin-attendance.html"><span class="s-icon"></span>Attendance</a>
+        <a href="admin-reports.html"><span class="s-icon"></span>Reports &amp; Activity</a>
+        <a href="admin-settings.html" class="active"><span class="s-icon"></span>Settings</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <h1>Settings</h1>
+      <p class="sub">Your admin account and local demo data.</p>
+
+      <div class="card narrow">
+        <h3>My Profile</h3>
+
+        <form onsubmit="return saveProfile()">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" class="field form-field" value="Admin User">
+
+          <label for="email">Email</label>
+          <input type="email" id="email" class="field form-field readonly" value="admin@univents.edu" readonly>
+
+          <label for="role">Role</label>
+          <input type="text" id="role" class="field form-field readonly" value="Admin" readonly>
+
+          <label for="empId">Employee ID</label>
+          <input type="text" id="empId" class="field form-field" placeholder="EMP-1024">
+
+          <label for="designation">Designation</label>
+          <select id="designation" class="field form-field">
+            <option value="">-- Select Designation --</option>
+            <option value="Administrator">Administrator</option>
+            <option value="Assistant Registrar">Assistant Registrar</option>
+            <option value="Event Coordinator">Event Coordinator</option>
+          </select>
+
+          <label for="office">Office</label>
+          <select id="office" class="field form-field">
+            <option value="">-- Select Office --</option>
+            <option value="Registrar Office">Registrar Office</option>
+            <option value="Student Affairs">Student Affairs</option>
+            <option value="IT Office">IT Office</option>
+          </select>
+
+          <label for="phone">Phone number</label>
+          <input type="text" id="phone" class="field form-field" placeholder="01XXXXXXXXX">
+
+          <label for="joinDate">Date of joining</label>
+          <input type="date" id="joinDate" class="field form-field">
+
+          <label for="password">New password (leave empty to keep current)</label>
+          <input type="password" id="password" class="field form-field">
+
+          <label for="confirmPassword">Confirm new password</label>
+          <input type="password" id="confirmPassword" class="field form-field">
+
+          <label><input type="checkbox" id="showPass" onclick="showPassword()"> Show password</label>
+
+          <button type="submit" class="btn save-btn">Save Changes</button>
+          <p class="error" id="saveMessage"></p>
+        </form>
+      </div>
+
+      <div class="card narrow">
+        <h3>Demo Data</h3>
+        <p class="sub">Events, registrations and accounts are sample data loaded from data.js. Resetting restores the sample data and signs you out.</p>
+        <a href="index.html" class="btn-red" onclick="alert('Demo data reset. You are signed out.')">Reset Demo Data</a>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-icon">📅</span>
+          <span class="logo-text"><b>UniVents</b></span>
+        </div>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="Home.html#events">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="admin-overview.html">Dashboard</a></p>
+      </div>
+    
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved. · AIUB</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+  <script>
+    // Settings page-e kono data load korte hoy na
+  </script>
+</body>
+</html>

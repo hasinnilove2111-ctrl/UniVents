@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Registrations - UniVents Admin</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-body">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-row">
+      <div class="logo">
+        <span class="logo-icon">📅</span>
+        <span class="logo-text"><b>UniVents</b></span>
+      </div>
+
+      <nav class="nav">
+        <a href="Home.html">Home</a>
+        <a href="Home.html#events">Browse Events</a>
+        <a href="Home.html#events">Register</a>
+        <a href="admin-overview.html" class="active">Admin Dashboard</a>
+      </nav>
+
+      <div class="auth">
+        <span class="user-badge" id="adminBadge">Admin User · Admin</span>
+        <a href="Home.html">Logout</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar + Main -->
+  <div class="container admin-layout">
+
+    <aside class="sidebar">
+      <h4>ADMIN</h4>
+      <nav>
+        <a href="admin-overview.html"><span class="s-icon"></span>Overview</a>
+        <a href="admin-events.html"><span class="s-icon"></span>Manage Events</a>
+        <a href="admin-users.html"><span class="s-icon"></span>Manage Users</a>
+        <a href="admin-registrations.html" class="active"><span class="s-icon"></span>All Registrations</a>
+        <a href="admin-attendance.html"><span class="s-icon"></span>Attendance</a>
+        <a href="admin-reports.html"><span class="s-icon"></span>Reports &amp; Activity</a>
+        <a href="admin-settings.html"><span class="s-icon"></span>Settings</a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <h1>All Registrations</h1>
+      <p class="sub">Every registration on the platform.</p>
+
+      <div class="card">
+        <div class="filters">
+          <input type="text" id="regSearch" class="field grow" placeholder="Search student name or ID..." onkeyup="showRegistrations()">
+          <select id="regEvent" class="field" onchange="showRegistrations()">
+            <option value="">All Events</option>
+          </select>
+          <select id="regStatus" class="field" onchange="showRegistrations()">
+            <option value="">All Registration Statuses</option>
+            <option value="Registered">Registered</option>
+            <option value="Cancelled">Cancelled</option>
+          </select>
+          <select id="regAttendance" class="field" onchange="showRegistrations()">
+            <option value="">All Attendance</option>
+            <option value="Present">Present</option>
+            <option value="Not marked">Not marked</option>
+          </select>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th>STUDENT</th>
+              <th>STUDENT ID</th>
+              <th>EVENT</th>
+              <th>EVENT DATE</th>
+              <th>REGISTERED</th>
+              <th>STATUS</th>
+              <th>ATTENDANCE</th>
+            </tr>
+          </thead>
+          <tbody id="regBody"></tbody>
+        </table>
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="footer-logo">
+          <span class="logo-icon">📅</span>
+          <span class="logo-text"><b>UniVents</b></span>
+        </div>
+        <p>Your Campus, Your Events. A University Event Management System built as a Web Technologies course project.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <p><a href="index.html#events">Browse Events</a></p>
+        <p><a href="#">My Registrations</a></p>
+        <p><a href="admin-overview.html">Dashboard</a></p>
+      </div>
+    </div>
+    <p class="copyright">© 2026 UniVents. All rights reserved. · AIUB</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="admin.js"></script>
+  <script>
+    fillEventSelect("regEvent");
+    showRegistrations();
+  </script>
+</body>
+</html>

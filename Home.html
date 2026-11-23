@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>UniVents - Discover What's Happening on Campus</title>
   <link rel="icon" href="https://png.pngtree.com/png-clipart/20191228/ourmid/pngtree-office-event-calendar-plan-png-image_2096035.jpg" />
+  <link rel="stylesheet" href="Home.css">
  
 </head>
 <body>
@@ -19,7 +20,7 @@
 
       <nav class="nav">
         <a href="#" class="active">Home</a>
-        <a href="#">Browse Events</a>
+        <a href="#events">Browse Events</a>
         <a href="#">My Registrations</a>
         <a href="#">Organizer Dashboard</a>
       </nav>
@@ -38,12 +39,12 @@
         <h1>Discover What's Happening on <span class="purple">Campus</span></h1>
         <p>Workshops, seminars, competitions and cultural nights — find the events that matter to you and join with one simple form.</p>
 
-        <form class="search">
+        <form class="search" onsubmit="return searchEvents()">
           <input type="text" placeholder="Search events by name or keyword">
           <button type="submit" class="btn">Search</button>
         </form>
 
-        <a href="#" class="btn big">Explore Events →</a>
+        <a href="#events" class="btn big">Explore Events →</a>
         <a href="#" class="btn-outline big">Become an Organizer</a>
       </div>
 
@@ -85,10 +86,10 @@
     </div>
   </section>
 
-  <section class="container section">
+  <section class="container section" id="events">
     <div class="title-row">
       <h2>Featured events</h2>
-      <a href="#" class="view-all">View all →</a>
+      <a href="#events" class="view-all">View all →</a>
     </div>
 
     <div class="event-grid">
@@ -190,7 +191,7 @@
       </div>
       <div>
         <h4>Explore</h4>
-        <p><a href="#">Browse Events</a></p>
+        <p><a href="#events">Browse Events</a></p>
         <p><a href="#">My Registrations</a></p>
         <p><a href="#">Organizer Dashboard</a></p>
       </div>
@@ -199,5 +200,6 @@
     <p class="copyright">© 2026 UniVents. All rights reserved.</p>
   </footer>
 
+  <script src="home.js"></script>
 </body>
 </html>
