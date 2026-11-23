@@ -134,7 +134,7 @@ CSS Grid is used for a two-dimensional layout, with rows AND columns.
 
 .postpone-btn:hover { background:crimson; }
 
-/* ---------- Tables ---------- */
+/* Tables */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -166,7 +166,7 @@ input[type="checkbox"] {
   height: 20px;
 }
 
-/* ---------- Create event form ---------- */
+/*Create event form  */
 /* Two fields side by side */
 .form-row {
   display: grid;
@@ -233,7 +233,7 @@ a { text-decoration: none; }
   padding: 0 20px;
 }
 
-/* ---------- Header ---------- */
+/*Header*/
 .header {
   background: white;
   border-bottom: 1px solid #e6e2f5;
@@ -311,7 +311,7 @@ a { text-decoration: none; }
 .btn:hover { background: #7550e8; }
 .btn:focus { outline: 3px solid orange; }
 
-/* ---------- Footer ---------- */
+/*  Footer  */
 .footer {
   margin-top: 60px;
   padding: 40px 0 20px 0;
