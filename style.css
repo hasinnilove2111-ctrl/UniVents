@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -288,5 +287,26 @@ label.terms {
 }
 
 .admin-note a:hover {
+  text-decoration: underline;
+}
+
+.submit-btn:disabled,
+.submit-btn:disabled:hover {
+  background-color: #b9b4d6;
+  cursor: not-allowed;
+}
+
+.forgot {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.forgot a {
+  font-weight: bold;
+  color: #5535c9;
+  text-decoration: none;
+}
+
+.forgot a:hover {
   text-decoration: underline;
 }
