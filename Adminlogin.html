@@ -31,7 +31,7 @@
     <h1>Admin account</h1>
     <p class="subtitle">Only for university staff. An access code is required.</p>
 
-    <form action="admin-register.php" method="post">
+    <form action="admin-register.php" method="post" onsubmit="return validateAdmin()" novalidate>
 
       <fieldset>
         <legend>Admin Information</legend>
@@ -109,5 +109,6 @@
     <p class="copyright">© 2026 UniVents. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
