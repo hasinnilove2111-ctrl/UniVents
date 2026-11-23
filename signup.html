@@ -30,7 +30,7 @@
     <h1>Create your account</h1>
     <p class="subtitle">Join UniEvents to discover campus events, connect with your university community, and create memorable experiences</p>
 
-    <form action="register.php" method="post">
+    <form action="register.php" method="post" onsubmit="return validateSignup()" novalidate>
 
       <p class="group-title">Register as</p>
       <input type="radio" id="student" name="role" value="Student" required>
@@ -123,5 +123,6 @@
     <p class="copyright">© 2026 UniVents. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
